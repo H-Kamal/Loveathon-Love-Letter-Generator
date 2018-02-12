@@ -33,6 +33,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -85,11 +88,11 @@
             padding-right: 0px;
         }
 
-        {#.logo {#}
-        {#    text-align: center;#}
-        {#    margin-top: 135px;#}
-        {##}
-        {#}#}
+        .logo {
+            text-align: center;
+            margin-top: 135px;
+
+        }
 
         .title {
             text-align: center;
@@ -114,17 +117,19 @@
 <body>
 
     <div class="dropdown">
-      <button class="name">Meet the Creator</button>
+      <button class="name">Meet the Creators</button>
       <div class="dropdown-content">
-        <p>Michael Chang</p>
-        <p>Opkar Ghadu</p>
-        <p>Hamza Kamal</p>
-        <p>Michael Zaghi</p>
+          <p><a href="https://www.linkedin.com/in/michael-chang-438349157/">Michael Chang</a></p>
+        <p><a href="https://github.com/OpkarGhadu">Opkar Ghadu</a></p>
+          <p><a href="https://www.linkedin.com/in/hamzakamal/">Hamza Kamal</a></p>
+          <p><a href="https://www.linkedin.com/in/michael-zaghi-67428043/">Michael Zaghi</a></p>
       </div>
     </div>
-{#        <div class="logo"><img src="image/log.png" alt="It's all about the love" height="200"></div>#}
+        <div class="logo">
+            <img src="{% static "image/love.png" %}" alt="It's all about the love" height="200">
+        </div>
 
-    <div class="title">Thy   Weird   Love   Message</div>
+    <div class="title">Thy   Weird   Love   Letter</div>
 
      <div class="container">
 
@@ -145,7 +150,7 @@
 
      </div>
 
-    <div class="thanks" >Special Thanks for our Mentor Alex!!!</div>
+    <div class="thanks" >Special thanks to our Mentor Alex!</div>
 
 </body>
 
